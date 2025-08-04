@@ -74,7 +74,7 @@ int power (int n, int p)
 }
 ```
 
-## Como compilar
+## How to compile 
 
 ```bash
 gcc fibonacci.c -o fibonacci
