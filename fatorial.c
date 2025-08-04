@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// FATORIAL DE UM NÚMERO
+// FACTORIAL OF A NUMBER
 
 int fatorial (int n)
 {

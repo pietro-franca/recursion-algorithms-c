@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// CONTA QUANTAS VEZES UM NÚMERO K APARECE EM UM NÚMERO N
+// COUNTS HOW MANY TIMES A NUMBER K APPEARS IN A NUMBER N
 
 int contaNum (int n, int k)
 {
-  // Se n = 45312, n%10 = 2, n%100 = 1, n%1000 = 3, ...
-  int unidade = n%10;
+  // If n = 45312, n%10 = 2, n%100 = 1, n%1000 = 3, ...
+  int unidade = n % 10;
 
   if (n == 0)
   {
@@ -16,13 +16,13 @@ int contaNum (int n, int k)
   {
     if (unidade == k)
     {
-      // Se a unidade for igual a k, adiciona 1
-      return contaNum((n-unidade)/10, k) + 1;
+      // If the last digit is equal to k, add 1
+      return contaNum((n - unidade) / 10, k) + 1;
     }
     else
     {
-      // Se não, passa pro próximo número
-      return contaNum((n-unidade)/10, k);
+      // If not, move to the next digit
+      return contaNum((n - unidade) / 10, k);
     }
   }
 }

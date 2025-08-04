@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// CALCULA O SOMATÓRIO ATÉ CERTO NÚMERO
+// CALCULATE SUMMATION UP TO A NUMBER n
 
 int soma (int n)
 {

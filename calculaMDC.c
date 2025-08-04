@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// CALCULA O MDC ENTRE DOIS NÚMEROS
+// CALCULATE THE GCD BETWEEN TWO NUMBERS
 
 int mdc(int p, int q)
 {
@@ -20,18 +20,18 @@ int mdc(int p, int q)
 
 int mdcGeral(int arr[], int n) 
 {
-  // Caso base: se restar apenas um número, o MDC é ele próprio
+  // Base case: if only one number remains, the GCD is the number itself
   if (n == 1) 
   {
     return arr[0];
   }
 
-  // Chamada recursiva: calcula o MDC do primeiro número com o MDC do resto do array
-  int mdcRestante = mdcGeral((arr + 1), n - 1);  // Chama mdc recursivamente para o restante do array
+  // Recursive call: calculates the GCD of the first number with the GCD of the rest of the array
+  int mdcRestante = mdcGeral((arr + 1), n - 1);  // Recursively calls GCD for the rest of the array
   int a = arr[0];
   int b = mdcRestante;
 
-  // Calcula o MDC de a e b usando o algoritmo de Euclides
+  // Calculates the GCD of a and b using Euclid's algorithm
   while (b != 0) 
   {
     int temp = b;
@@ -39,8 +39,9 @@ int mdcGeral(int arr[], int n)
     a = temp;
   }
   
-  return a; // Retorna o MDC final
+  return a; // Returns the final GCD
 }
+
 
 int main()
 {

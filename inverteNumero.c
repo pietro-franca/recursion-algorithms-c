@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// INVERTE UM NÚMERO INTEIRO
+// REVERSES AN INTEGER NUMBER
 
 int inverteNumero (int n)
 {
@@ -10,25 +10,25 @@ int inverteNumero (int n)
     return 0;
   }
 
-  int m = n, k=1;
-  int unidade = n%10;
+  int m = n, k = 1;
+  int unidade = n % 10;
 
-  // Divide o valor de "m" até que "k" chegue ao 
-  // valor correto para multiplicar a unidade corretamente
+  // Divides the value of "m" until "k" reaches 
+  // the correct value to multiply the digit correctly
 
-  // Ex: 
+  // Example:
   //  n = 123, unidade = 3
   //  m = 123, k = 1
   //  m = 12, k = 10
   //  m = 1, k = 100
-  //  unidade*k = 300 ...
+  //  unidade * k = 300 ...
 
-  for (; m > 1; k*=10)
+  for (; m > 1; k *= 10)
   {
-    m/=10;
+    m /= 10;
   }
 
-  return (unidade*k + inverteNumero((n-unidade)/10));
+  return (unidade * k + inverteNumero((n - unidade) / 10));
 }
 
 int main()

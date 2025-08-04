@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// CONVERTE UM NÚMERO EM BINÁRIO
+// CONVERT A INTEGER NUMBER TO BINARY
 
 void converteBinario (int n)
 {

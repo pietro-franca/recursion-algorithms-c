@@ -1,42 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int buscaSequencial (int *lista, int n, int k)
-{
-  for (int i=0; i < n; i++)
-  {
-    if (lista[i] == k)
-    {
-      return i;
-    }
-  }
-  return -1;
-}
+// BINARY SEARCH
 
 int buscaBinaria (int *lista, int li, int ls, int k)
 {
+  // Base case: if the search range is invalid, element not found
   if (li > ls)
   {
     return -1;
   }
 
+  // Calculate the middle index
   int meio = (li + ls)/2;
 
+  // If the middle element is the target, return its index
   if (lista[meio] == k)
   {
     return meio;
   }
   
+  // If target is smaller, search in the left half (including mid)
   if (lista[meio] >= k)
   {
     return buscaBinaria (lista, li, meio, k);
   }
   else
   {
+    // Otherwise, search in the right half (excluding mid)
     return buscaBinaria (lista, meio+1, ls, k);
   }
-  
 }
+
 
 int main()
 {

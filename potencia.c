@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// DADOS DOIS NÚMEROS INTEIROS num E pot,
-// CALCULA E DEVOLVE O RESULTADO num^pot
+// GIVEN TWO INTEGERS num AND pot,
+// CALCULATES AND RETURNS THE RESULT OF num^pot
 
 int potencia (int n, int p)
 {
@@ -12,7 +12,7 @@ int potencia (int n, int p)
   }
   else
   {
-    return n*potencia (n, p-1);
+    return n * potencia(n, p - 1);
   }
 }
 

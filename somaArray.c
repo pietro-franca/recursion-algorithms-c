@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// SOMA OS INTEIROS DE UM ARRAY
+// SUM OF ELEMENTS IN AN ARRAY
 
 int somaArray (int *arr, int n)
 {

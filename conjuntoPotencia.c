@@ -2,11 +2,11 @@
 #include <string.h>
 #define MAX 100
 
-// GERA O CONJUNTO POTÊNCIA DE UMA STRING
+// GENERATES THE POWER SET OF A STRING
 
-// 'pref' armazena o prefixo atual (subconjunto em construção)
-// 's' é a parte restante da string original
-// 'p' é a string onde os subconjuntos gerados serão concatenados
+// 'pref' stores the current prefix (subset being built)
+// 's' is the remaining part of the original string
+// 'p' is the string where the generated subsets will be concatenated
 
 void conjuntoPotencia(char pref[], char s[], char *p) 
 {
@@ -14,10 +14,10 @@ void conjuntoPotencia(char pref[], char s[], char *p)
   char aux[100]; 
   tam = strlen(s);
 
-  // Caso base: não há mais caracteres para processar
+  // Base case: no more characters to process
   if (tam == 0)   
   {
-    // Se o prefixo está vazio, representa o conjunto vazio
+    // If the prefix is empty, it represents the empty set
     if (strlen(pref) == 0 )
     {
       strcpy(p, "\n\n{}");
@@ -25,21 +25,21 @@ void conjuntoPotencia(char pref[], char s[], char *p)
     else 
     {
       strcat(p, "\n"); 
-      strcat(p, pref); // Adiciona o subconjunto atual ao resultado final
+      strcat(p, pref); // Adds the current subset to the final result
     }
     return;
   }
 
-  // Primeiro, chamada recursiva SEM incluir o caractere atual (s[0])
+  // First, recursive call WITHOUT including the current character (s[0])
   conjuntoPotencia(pref, s+1, p);
 
-  // Agora preparamos a chamada COM o caractere atual incluído
+  // Now prepare the call WITH the current character included
   strcpy(aux, pref); 
   tam = strlen(aux); 
   aux[tam] = s[0]; 
   aux[tam+1] = '\0';
 
-  // Chamada recursiva COM o caractere atual incluído
+  // Recursive call WITH the current character included
   conjuntoPotencia(aux, s+1, p);
 
   return;

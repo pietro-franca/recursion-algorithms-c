@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// VERIFICA SE UM NÚMERO É PRIMO
-// E, DADO UM VALOR max, LISTA TODOS OS PRIMOS ATÉ ESSE VALOR
+// CHECK IF A NUMBER IS PRIME AND,
+// GIVEN A MAXIMUM VALUE max, 
+// LIST ALL PRIME NUMBERS UP TO THAT VALUE
 
 int primo (int n, int divisor)
 {
